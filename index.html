@@ -12,6 +12,20 @@
           margin-left: auto;
           margin-right: auto;
         }
+        .centeredImgAnim {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          animation-name: fadeOut;
+          animation-duration: 0.7s;
+          animation-play-state: paused;
+          animation-iteration-count: infinite;
+        }
+        /*.centeredImgAnim:hover
+        {
+            cursor:pointer;
+            animation-play-state: running;
+        }*/
         h1 {
             color: white;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -31,11 +45,24 @@
             width: 20%;
             position: relative;
             left: 35%;
+            padding: 15px;
         }
         .row:after {
             content: "";
             display: table;
             clear: both;
+        }
+
+        /*animation for sajam to fade out */
+        @keyframes fadeOut {
+            0%
+            {
+                opacity: 1;
+            }
+            100%
+            {
+                opacity: 0;
+            }
         }
         /* makes the columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
         @media screen and (max-width: 600px) {
@@ -53,7 +80,7 @@
             <div class="column">
                 <h2>About me</h2>
                 <p>
-                    to be filled in later
+                    Low effort shitposter & inexperienced programmer. Currently working on a few personal projects to improve the programming bit.
                 </p>
 
             </div>
@@ -64,9 +91,14 @@
                     Bluesky:  <a href="https://bsky.app/profile/serperior.gay">@serperior.gay</a>
                 </p>
                 <p>
-                    to be filled in later
+                    Github: <a href="https://github.com/asleeplessdream">asleeplessdream</a>
+                </p>
+                <p>
+                    Discord: @asleeplessdream
                 </p>
             </div>
         </div>
+
+        <input id="image" type="image" src="assets/images/sajam.jpg" alt="sajam" class="centeredImgAnim">
     </body>
 </html>
