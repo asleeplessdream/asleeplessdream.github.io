@@ -1,0 +1,7 @@
+#block GPTBot (ChatGPT)
+User-agent: GPTBot
+Disallow: /
+
+#block Google Bard
+User-agent: Google-Extended
+Disallow: /
